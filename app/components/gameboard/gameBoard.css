@@ -1,0 +1,14 @@
+.board:hover {
+  cursor: pointer;
+}
+
+.board {
+  display: flex;
+  width: min-content;
+  background-color: rgba(128, 128, 128, 0);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}

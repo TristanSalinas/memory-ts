@@ -1,0 +1,97 @@
+.card-wraper {
+  border: 1px solid rgb(104, 96, 114);
+}
+
+.picture {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid grey;
+}
+
+@keyframes flash-red {
+  0% {
+    filter: none;
+  }
+  50% {
+    filter: brightness(0.5) sepia(1) hue-rotate(-50deg) saturate(10);
+  }
+  100% {
+    filter: none;
+  }
+}
+
+@keyframes glimpse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.opacity-1 {
+  opacity: 1;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.picture1 {
+  background-image: url(./cards.png);
+  background-position-y: 0px;
+}
+.picture2 {
+  background-image: url(./cards.png);
+  background-position-y: -100px;
+}
+.picture3 {
+  background-image: url(./cards.png);
+  background-position-y: -201px;
+}
+.picture4 {
+  background-image: url(./cards.png);
+  background-position-y: -301px;
+}
+.picture5 {
+  background-image: url(./cards.png);
+  background-position-y: -401px;
+}
+.picture6 {
+  background-image: url(./cards.png);
+  background-position-y: -496px;
+}
+.picture7 {
+  background-image: url(./cards.png);
+  background-position-y: -601px;
+}
+.picture8 {
+  background-image: url(./cards.png);
+  background-position-y: -701px;
+}
+.picture9 {
+  background-image: url(./cards.png);
+  background-position-y: -801px;
+}
+.picture10 {
+  background-image: url(./cards.png);
+  background-position-y: -901px;
+}
+.picture11 {
+  background-image: url(./cards.png);
+  background-position-y: -1001px;
+}
+.picture12 {
+  background-image: url(./cards.png);
+  background-position-y: -1101px;
+}
+.picture13 {
+  background-image: url(./cards.png);
+  background-position-y: -1198px;
+}
+.picture14 {
+  background-image: url(./cards.png);
+  background-position-y: -1301px;
+}
