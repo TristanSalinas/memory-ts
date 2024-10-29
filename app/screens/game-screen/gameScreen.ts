@@ -25,7 +25,7 @@ export default function gameScreen() {
     gameContainer.innerHTML = "";
     gameContainer.append(title);
     const board = gameBoard(boardState);
-    const progressBar = progressBarController(60000);
+    const progressBar = progressBarController(180000);
     const progressBarDiv = progressBar.getProgresssBar();
 
     gameContainer.append(board);
