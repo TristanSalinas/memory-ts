@@ -11,3 +11,9 @@
   background-color: var(--color);
   transition: width 0.2s ease;
 }
+
+.timer {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}

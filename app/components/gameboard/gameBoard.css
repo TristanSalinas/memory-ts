@@ -6,6 +6,20 @@
   display: flex;
   width: min-content;
   background-color: rgba(128, 128, 128, 0);
+  animation: spin3d 2s ease 1 backwards;
+  transform: perspective(900px) rotateX(15deg);
+}
+
+@keyframes spin3d {
+  0% {
+    transform: perspective(900px) rotateX(15deg);
+  }
+  100% {
+    transform: perspective(900px) rotateX(195deg);
+  }
+}
+
+.spinning-div {
 }
 
 .column {

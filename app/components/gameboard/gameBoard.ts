@@ -25,9 +25,13 @@ export function gameBoard(boardData: any) {
     return { address, cardId, cardDiv };
   }
   let boardMemory: CardInfo[] = [];
-
+  let clickCounter = 0;
   //Event to dispatch on win
-  const gameWonEvent = new CustomEvent("gameWon");
+  const gameWonEvent = new CustomEvent("gameWon", {
+    detail: {
+      clickCounter,
+    },
+  });
   function isWon() {
     console.log(boardMemory.length);
     return boardMemory.length === boardData.getBoardState().length;
@@ -66,6 +70,7 @@ export function gameBoard(boardData: any) {
     return function (eventOnCell: MouseEvent) {
       const currentCardDiv = eventOnCell.target as HTMLElement;
       if (!isCellAlreadySaved()) {
+        clickCounter++;
         if (boardMemory.length % 2 === 0) {
           removeAllPictureAnimations();
           remember(currentCardDiv);

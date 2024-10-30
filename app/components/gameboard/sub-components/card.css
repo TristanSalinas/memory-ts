@@ -1,6 +1,9 @@
 .card-wraper {
   border: 1px solid rgb(104, 96, 114);
 }
+.card-wraper:hover {
+  box-shadow: inset 0px 0px 10px 1px #ffffff88;
+}
 
 .picture {
   position: relative;

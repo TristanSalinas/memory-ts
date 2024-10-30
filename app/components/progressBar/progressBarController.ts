@@ -7,6 +7,16 @@ export function progressBarController(duration: number) {
   bar.classList.add("bar");
   barContainer.append(bar);
 
+  const timer = document.createElement("p");
+  timer.classList.add("timer");
+  barContainer.append(timer);
+  let timeLeft = duration / 1000;
+  function actualiseTimer() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timer.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  }
+
   const timerEndEvent = new CustomEvent("timerEnd");
 
   const startTimer = () => {
@@ -15,7 +25,8 @@ export function progressBarController(duration: number) {
     let width = 100;
 
     const fillInterval = setInterval(() => {
-      console.log(width);
+      timeLeft--;
+      actualiseTimer();
       width -= 100 / (duration / 1000);
       bar.style.width = width + "%";
       if (width <= 0) {
